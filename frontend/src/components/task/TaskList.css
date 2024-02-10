@@ -1,0 +1,81 @@
+.userList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -100x;
+}
+
+.listUser {
+  width: 100%;
+}
+
+.userButton {
+  width: 150px;
+  margin-right: 200px;
+  border: none;
+  background-color: darkblue;
+  color: white;
+  padding: 10px 7px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.customDataGrid1 {
+  margin-top: 20px;
+}
+
+.userListDelete {
+  color: red;
+  cursor: pointer;
+}
+
+.adduser {
+  display: flex;
+  align-items: center;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.expandedTextarea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px 0px;
+  font-size: 16px;
+}
+
+.task-list-heading {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+@media screen and (max-width: 600px) {
+  .userList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .customDataGrid {
+    overflow-x: scroll;
+  }
+
+  .listUser {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

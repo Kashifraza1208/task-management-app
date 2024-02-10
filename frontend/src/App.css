@@ -1,0 +1,20 @@
+.greenColor {
+  color: white;
+  background-color: rgb(61, 179, 61) !important;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+.redColor {
+  color: white;
+  background-color: rgb(243, 12, 12) !important;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
