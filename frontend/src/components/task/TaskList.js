@@ -20,7 +20,6 @@ const TaskList = ({ loading }) => {
   const { allTask } = useSelector((state) => state.allTask);
 
   const handleDelete = async (taskId) => {
-
     await dispatch(deleteTask(taskId));
     dispatch(getTask());
     if (taskId !== 234543252) {
@@ -31,7 +30,9 @@ const TaskList = ({ loading }) => {
   const handleStatus = (taskId, completed) => {
     dispatch(updateTask(taskId, !completed));
     dispatch(getTask());
-    alert.success("Task Updated Successfully!");
+    if (taskId !== 234543252) {
+      alert.success("Task Updated Successfully!");
+    }
   };
 
   const columns = [
@@ -88,19 +89,16 @@ const TaskList = ({ loading }) => {
       headerName: "Task Status",
       renderCell: (params) => {
         return (
-       
-          (
-            <button
-              className={
-                params.row.completed === 0 || params.row.id === 234543252
-                  ? "redColor"
-                  : "greenColor"
-              }
-              onClick={() => handleStatus(params.row.id, params.row.completed)}
-            >
-              {params.row.completed === 1 ? "Completed" : "Incomplete"}
-            </button>
-          )
+          <button
+            className={
+              params.row.completed === 0 || params.row.id === 234543252
+                ? "redColor"
+                : "greenColor"
+            }
+            onClick={() => handleStatus(params.row.id, params.row.completed)}
+          >
+            {params.row.completed === 1 ? "Completed" : "Incomplete"}
+          </button>
         );
       },
       width: 200,
